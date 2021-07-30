@@ -2,6 +2,8 @@
 
 If you need a clean starter with a simple connection to Web3 and Quadrans start from there.
 
+If you want to see the preview go here: https://quadrans.github.io/quadrans-connect/#/
+
 ## Technologies used
 
 - VueJS framework
