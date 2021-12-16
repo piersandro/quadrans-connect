@@ -19,12 +19,13 @@
         >Disconnect</b-button
       >
     </div>
-    <br />--<br /><div style="font-size: 12px">
+    <br />--<br />
+    <div style="font-size: 12px">
       This is an
       <a href="https://github.com/quadrans/quadrans-connect" target="_blank"
         >open-source</a
-      ><br>
-      project made with ❤️ by<br>
+      ><br />
+      project made with ❤️ by<br />
       <a href="https://quadrans.io" target="_blank">Quadrans Foundation</a>
     </div>
   </div>
@@ -116,14 +117,17 @@ export default {
     const app = this;
     if (window.ethereum) {
       app.web3 = await new Web3(window.ethereum);
-      const accounts = await app.web3.eth.getAccounts();
-      if (accounts.length > 0) {
-        if (accounts[0] === localStorage.getItem("connected")) {
-          const balance = await app.web3.eth.getBalance(accounts[0]);
-          app.account = accounts[0];
-          app.balance = parseFloat(
-            app.web3.utils.fromWei(balance, "ether")
-          ).toFixed(10);
+      app.selected_network = await app.web3.eth.net.getId();
+      if (app.selected_network === 10946 || app.selected_network === 10947) {
+        const accounts = await app.web3.eth.getAccounts();
+        if (accounts.length > 0) {
+          if (accounts[0] === localStorage.getItem("connected")) {
+            const balance = await app.web3.eth.getBalance(accounts[0]);
+            app.account = accounts[0];
+            app.balance = parseFloat(
+              app.web3.utils.fromWei(balance, "ether")
+            ).toFixed(10);
+          }
         }
       }
     }
