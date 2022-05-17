@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.svg" width="300" /><br /><br />
-    --<br /><br />
+    <img src="https://quadrans.io/assets/brand/blockchain/logo_quadrans_white.svg" width="300" /><br /><br />
+    <h3>This tools allows to configure automatically<br>your <b>MetaMask wallet</b> to work with the <b>Quadrans Blockchain</b></h3><br /><br />
     <div v-if="!account">
-      <b-button type="is-primary" v-on:click="switchNetwork('quadrans')"
+      <b-button type="fill" v-on:click="switchNetwork('quadrans')"
         >Connect to Mainnet</b-button
       ><br /><br />
-      <b-button type="is-primary is-light" v-on:click="switchNetwork('ticino')"
+      <b-button type="fill" v-on:click="switchNetwork('ticino')"
         >Connect to Testnet</b-button
       >
     </div>
@@ -19,7 +19,7 @@
         >Disconnect</b-button
       >
     </div>
-    <br />--<br />
+    <br />
     <div style="font-size: 12px">
       This is an
       <a href="https://github.com/quadrans/quadrans-connect" target="_blank"

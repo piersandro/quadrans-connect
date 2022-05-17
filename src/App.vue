@@ -5,12 +5,19 @@
 </template>
 
 <style>
+html, body {
+  background-color: #16173d !important;
+  color: #fff !important;
+}
+h3 {
+  color: #fff !important;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff !important;
   margin-top:150px
 }
 
